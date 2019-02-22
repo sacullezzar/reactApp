@@ -1,11 +1,12 @@
 import React from 'react';
 import '../css/App.css';
 
-const Form = () => {
+const Form = (props) => {
     return (
       <div className='form'>
-        <form>
-            <input type='text'></input>
+        <form onSubmit={props.makeSearch}>
+            <input type='text' name='request'></input>
+            
             <button>Submit</button>
         </form>
       </div>
